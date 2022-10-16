@@ -92,6 +92,12 @@ class ApplicationSettingsForm(forms.Form):
         ("1", "enable cookie"),
     ]
 
+    AUTODELETE_WATCHED_VIDEOS_CHOICES = [
+        ("", "-- change auto delete settings"),
+        ("0", "auto delete watched and unwatched videos"),
+        ("1", "auto delete only watched videos"),
+    ]
+
     subscriptions_channel_size = forms.IntegerField(required=False)
     downloads_limit_count = forms.IntegerField(required=False)
     downloads_limit_speed = forms.IntegerField(required=False)
@@ -123,6 +129,9 @@ class ApplicationSettingsForm(forms.Form):
     )
     application_enable_cast = forms.ChoiceField(
         widget=forms.Select, choices=CAST_CHOICES, required=False
+    )
+    downloads_autodelete_watched_videos = forms.ChoiceField(
+        widget=forms.Select, choices=AUTODELETE_WATCHED_VIDEOS_CHOICES, required=False
     )
 
 

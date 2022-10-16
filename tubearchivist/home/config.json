@@ -30,7 +30,8 @@
         "cookie_import": false,
         "throttledratelimit": false,
         "integrate_ryd": false,
-        "integrate_sponsorblock": false
+        "integrate_sponsorblock": false,
+        "autodelete_watched_videos": true
     },
     "application": {
         "app_root": "/app",
